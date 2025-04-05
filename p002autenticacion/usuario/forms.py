@@ -1,6 +1,6 @@
 from django import forms
 
 class LoginForm(forms.Form):
-    username = forms.ChasrFiels()
+    username = forms.CharField()
     """ Sirver para poner en puntos la contraseña """
-    password = forms.CharField(widget=forms.PasswordInput())
+    password = forms.CharField(widget=forms.PasswordInput)
