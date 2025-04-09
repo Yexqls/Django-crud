@@ -8,11 +8,12 @@
 {% else %}
 <p> Ingrese su usuario y contraseña para iniciar sesion</p>
 {% endif %}
-<form action="{%% url 'login'}" method="post">
+<!-- En action redirigue -->
+<form action="{% url 'login' %}" method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <!-- se redirige a otra pagina con el next ya con la sesion iniciada con django-->
-    <input type="hidden" name="next" value="{{ next }}">
+    <input type="hidden" name="next", value="{{ next }}">
 
     <!-- Botón de envío -->
     <button type="submit">Iniciar sesión</button>
