@@ -16,6 +16,8 @@ urlpatterns = [
     #se tokeniza el id del usuario y el token de verificacion ya que solo exista un link para ese usuario
     path('password-reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
     path('password-reset/complete/', auth_views.PasswordResetCompleteView.as_view(), name='password_reset_complete'),
+    path('register/', views.register, name='register'),
+    path('edit/', views.edit, name='edit'),
 
     path('', views.dashboard, name='dashboard'),
 

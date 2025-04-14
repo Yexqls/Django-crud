@@ -3,9 +3,7 @@
 
 {% block content %}
 <h1>Dashboard</h1>
-<p>Bienvenido <form action="{% url 'logout' %}" method="post">
-    {% csrf_token %}
-    <button type="submit">Cerrar sesion</button>
-</form></p>
+<p>Beinvenido a tu Dashboard, puede <a href=" {%  url 'edit' %}">editar tu perfil</a> o <a
+        href="{% url 'password_change' %}">Puedes cambiar tu contraseña</a></p>
 
 {% endblock %}
